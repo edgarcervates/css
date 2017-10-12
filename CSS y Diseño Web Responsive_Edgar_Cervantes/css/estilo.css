@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+
+body
+{
+  font-family: 'Dancing Script';
+  background-color: #02010a;
+}
+
+#contenido
+{
+  margin-left: auto;
+  margin-right: auto;
+  display: flex; /* hay un contenenor flexible que contiene otras cajas que son flexibles y estas se limitan a ese contenedor general*/
+  flex-direction: column; /*Es la dirección que van a tomar los elementos, en ese caso, los elementos se organizan como columnas*/
+}
+
+header
+{
+  height: 80px;
+	background-color: #5b7989;
+  border-radius: 10px 10px 0 0;
+  order: 0; /*Puedo poner o acomodar por numero que aparece primero y el orden, pero aqui esra en 0 quiere decir que lleva el orden predefinido*/
+  animation: miSlideIn 1s; /*Doy referencia a mi animacion, con sus respectivo tiempo*/
+}
+/*Animacion la cual ase efecto de rebote de la pagina*/
+@-webkit-keyframes miSlideIn{
+  0%{
+    margin-top: 150%;
+  }
+  60%{
+    margin-top: -5%;
+  }
+  100%{
+    margin-top: 0%;
+  }
+}
+
+/*Asigno al contenedor del titulo un largo y la poscicion del contenedor*/
+header #titulo
+{
+  width: 50%;
+  float: left;
+}
+
+/*Asigno margen al hijo del contenedor "titulo"*/
+header #titulo h1
+{
+  margin-left: 5%;
+}
+
+/*Hago referencia al hijo del "header" (#menu), asignandole un largo, que se va a pociconar de lado derecho con un margen de 3px*/
+header #menu
+{
+  width: 50%;
+  float: right;
+  padding-top: 3%;
+}
+
+/*La etiqueta h1 la alineo al lado izauierdo, con un efecto de sombra y color de letra */
+header h1
+{
+  text-align: left;
+  text-shadow: 2px 2px 2px #02010a;
+	color: white;
+}
+
+/**/
+.link
+{
+  font-size: 23px;
+  text-decoration: none;
+  padding-left: 9%;
+  color: white;
+}
+
+section #img-principal
+{
+  width: 100%;
+  height: 400px;
+  text-align: center;
+  background-color: #82c3a6;
+  order: 2;
+}
+
+section #img-izquierda
+{
+  width: 50%;
+  height: 300px;
+  background-color: #d5c75f;
+  float: left;
+  order: 3;
+}
+
+section #img-derecha
+{
+  width: 50%;
+  height: 300px;
+  background-color: #d5c75f;
+  float: right;
+  order: 4;
+}
+
+.acceso_rapido{
+  text-decoration: none;
+  color: black;
+}
+
+#img-principal img
+{
+  height: 90%;
+  float: center;
+  margin: 2% 0 0 0%;
+  -webkit-box-shadow: 2px 2px 2px #02010a;
+  -moz-box-shadow: 2px 2px 2px #02010a;
+}
+
+#img-izquierda img
+{
+  height: 70%;
+  float: left;
+  margin: 5% 0 0 10%;
+  border: 1px solid;
+  -webkit-box-shadow: 2px 2px 2px #02010a;
+  -moz-box-shadow: 2px 2px 2px #02010a;
+}
+
+#img-izquierda img:hover{
+  transition: all 1s;
+  transform: rotate(10deg);
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+}
+
+#img-izquierda h2
+{
+  text-align: center;
+  padding-top: 50%
+}
+
+#img-derecha img
+{
+  height: 70%;
+  float: right;
+  margin: 5% 10% 0 0;
+  border: 1px solid;
+  -webkit-box-shadow: 2px 2px 2px #02010a;
+  -moz-box-shadow: 2px 2px 2px #02010a;
+}
+
+#img-derecha img:hover{
+  transition: all 1s;
+  transform: translate(20px,-5px);
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+}
+
+#img-derecha h2
+{
+  text-align: center;
+  padding-top: 50%
+}
+
+#contacto
+{
+  width: 20%;
+  float: left;
+  text-align: left;
+  padding-left: 5%;
+}
+
+#terminos
+{
+  width: 25%;
+  float: right;
+  text-align: left;
+}
+
+#redes
+{
+  width: 25%;
+  float: right;
+  text-align: left;
+}
+
+#redes img
+{
+  height: 15px;
+  border-radius: 10px;
+}
+
+#derechos
+{
+  width: 25%;
+  float: right;
+  text-align: left;
+}
+
+footer
+{
+  width: 100%;
+  height: 170px;
+  clear: both;
+  background-color: #C6d5c5;
+  border-radius: 0 0 10px 10px;
+  order: 5;
+}
+
+section #contenido{
+  width: 100%;
+  height: 300px;
+  background-color: white;
+}
+
+section #contenedor{
+  width: 100%;
+  height: 440px;
+  background-color: #d5c75f;
+}
+
+
+
+#contenedor img{
+  height: 200px;
+  float: left;
+  width: 29%;
+  margin: 10px 0 0 30px;
+  -webkit-box-shadow: 2px 2px 2px #02010a;
+  -moz-box-shadow: 2px 2px 2px #02010a;
+}
+
+#imagen1{
+  -webkit-filter: blur(10px);
+  filter: blur(10px);
+}
+
+#imagen3{
+  -webkit-filter: sepia(90%);
+  filter: sepia(90%);
+}
+
+#imagen4{
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+#imagen2{
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+#imagen6{
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+@media screen{
+  #contenido{
+    width: 900px;
+  }
+}
+
+@media (max-width:900px){
+  header{
+    height: 170px !important;
+    display: flex;
+    flex-direction: column;
+  }
+  header #titulo{
+    width: 100% !important;
+    float: none;
+    order: 0;
+  }
+  header #titulo h1{
+    text-align: center;
+  }
+  header #menu{
+    width: 100% !important;
+    float: none;
+    order: 1;
+  }
+  #contenido{
+    width: 100%;
+  }
+  #img-principal{
+    height: 200px !important;
+  }
+  #img-principal img{
+    height: 73% !important;
+    margin: 5% 0 0 5%;
+  }
+  #img-izquierda{
+    width: 100% !important;
+    float: none;
+  }
+  #img-izquierda h2{
+    padding-top: 62%;
+  }
+  #img-derecha img{
+    height: 66% !important;
+    float: left !important;
+    margin: 5% 0 0 5% !important;
+  }
+  #img-izquierda img{
+    height: 62% !important;
+    margin: 5% 0 0 5% !important;
+  }
+  #img-derecha{
+    width: 100% !important;
+    float: none;
+  }
+  #img-derecha h2{
+    padding-top: 62%;
+  }
+  #contacto{
+    width: 95% !important;
+    order: 0;
+  }
+  #terminos{
+    width: 95% !important;
+    float: left;
+    padding-left: 5%;
+    order: 1;
+  }
+  #redes{
+    width: 95% !important;
+    float: left;
+    padding-left: 5%;
+    order: 2;
+  }
+  #derechos{
+    width: 95% !important;
+    float: left;
+    padding-left: 5%;
+    order: 3;
+  }
+
+  footer{
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  section #contenedor{
+   width: 100%;
+   height: auto;
+ }
+
+ #contenedor  img{
+   width: 80%;
+   height: auto;
+   margin-left: 10px;
+   display: inline;
+   float: none;
+ }
+}
